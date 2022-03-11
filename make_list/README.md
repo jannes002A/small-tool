@@ -15,4 +15,6 @@ Then go to the src folder and do
 ```
 python3 make_list.py -n example -l 1
 ```
-to create a pdf with bulletpoints. You can find the resulte in the res folder.
+to create a pdf with bulletpoints. You can find the resulte in the res folder. In the res folder you can also find a txt file which you can send to your phone and load it into Simple Note. You can load the txt into the app and have a nice list. 
+
+Enjoy!
