@@ -8,12 +8,9 @@ parser.add_argument('-n', default='', help='name of txt file')
 parser.add_argument('-l', default = '', help='use produce tex')
 args = parser.parse_args()
 
-# open file in read mode
-name = args.n
 path = '..'
 
-
-def get_list():
+def get_list(name):
     with open(f'{path}/data/{name}.txt', 'r') as read_obj:
         # pass the file object to reader() to get the reader object
         csv_reader = reader(read_obj)
@@ -29,7 +26,7 @@ def get_list():
             file.write(output)
 
 
-def get_latex():
+def get_latex(name):
 
     with open(f'{path}/data/{name}.txt', 'r') as read_obj:
         # pass the file object to reader() to get the reader object
@@ -76,8 +73,12 @@ def get_latex():
 
         bash_command = f'pdflatex ../res/{name}.tex'
         subprocess.run(bash_command.split())
-
+        mv_command = f'./move_file.sh {name}'
+        subprocess.run(mv_command,shell=True)
 if __name__ == '__main__':
-    get_list()
+    # open file in read mode
+    name = args.n
+
+    get_list(name)
     if args.l:
-        get_latex()
+        get_latex(name)

@@ -1,0 +1,27 @@
+
+\documentclass[a4paper,british]{article}
+\usepackage{babel}
+\usepackage[utf8]{inputenc} 
+\usepackage{enumitem,amssymb}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+\begin{document}
+\title{ToDo List}
+\date{\today}
+\author{List Maker}
+\maketitle
+\begin{itemize}
+\item example 
+\begin{todolist}
+\item Punkt 1
+\item Punkt 2
+\item Punkt 
+\end{todolist}
+\end{itemize}
+\end{document}
