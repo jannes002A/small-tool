@@ -13,6 +13,6 @@ Thing 3
 
 Then go to the src folder and do 
 ```
-"python3 make_list.py -n example -l 1
+python3 make_list.py -n example -l 1
 ```
 to create a pdf with bulletpoints. You can find the resulte in the res folder.
